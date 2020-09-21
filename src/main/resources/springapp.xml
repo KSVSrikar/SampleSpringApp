@@ -1,0 +1,33 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <bean id="helloBean" class="com.optum.HelloWorld" >
+        <property name="name" value="Srikar"/>
+    </bean>
+
+    <bean id="Srikar" class="com.optum.Employee" >
+        <property name="name" value="Srikar"/>
+        <property name="salary" value="10000"/>
+    </bean>
+    <bean id="Rohit" class="com.optum.Employee" >
+        <property name="name" value="Rohit"/>
+        <property name="salary" value="12000"/>
+    </bean>
+    <bean id="Sahithi" class="com.optum.Employee" >
+        <property name="name" value="Sahithi"/>
+        <property name="salary" value="14000"/>
+    </bean>
+
+    <bean id="taskforce" class="com.optum.Workforce">
+        <property name="taskforce">
+            <map>
+                <entry key="001" value-ref="Srikar"/>
+                <entry key="002" value-ref="Rohit" />
+                <entry key="003" value-ref="Sahithi"/>
+            </map>
+        </property>
+    </bean>
+
+</beans>
